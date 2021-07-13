@@ -7,7 +7,7 @@ class game{
         this.questionSound = new sound('question.mp3')
         this.sound.start();
        
-        
+       
         this.screen.eventstartBtn(()=>{
             this.start()
         })
@@ -21,8 +21,8 @@ class game{
             this.questionSound.start()
         })
         this.question.show();
-        this.question.eventClickanwer((event)=>{
-            this.question.checkanswer(event)
+        this.question.eventClickanwer((event) => {
+                this.question.checkanswer(event)
         })
 
     }

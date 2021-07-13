@@ -34,7 +34,8 @@ const question = [
 class questions{
     constructor(num){
         this.num = num;
-        this.questionNum = question[this.num] 
+        this.questionNum = question[this.num];
+        this.clicked = false;
     }
     show(){
         document.getElementById('question').innerHTML = this.questionNum.question;
@@ -45,18 +46,23 @@ class questions{
     eventClickanwer(callback){
         for (let i = 1; i < 5; i++) {
             document.getElementById('answers_' + i).addEventListener('click',() => {
-                document.getElementById('answers_' + i).style.backgroundColor = 'green';
-                document.getElementById('answers_' + i).style.color = 'white'
                 callback(i)
             });
+        }  
 
-        }
     }
-    checkanswer(answers){
-        if(answers == question[this.num].true){
-            
-        console.log(answers)
+    async checkanswer(answers){
+        if(!this.clicked){
+            document.getElementById('answers_' + answers).style.backgroundColor = 'green';
+            document.getElementById('answers_' + answers).style.color = 'white'
+            this.clicked = true
         }
+       
+        if(answers == question[this.num].true){
+            document.getElementById('answers_' + answers).classList.add('quadrat')
+        }
+        await new Promise(resolve => setTimeout(resolve, 5 * 1000));
+        document.getElementById('answers_' + question[this.num].true).classList.add('quadrat')
     }
     
 }

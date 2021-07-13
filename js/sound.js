@@ -9,13 +9,13 @@ class sound{
         
     }
     start(oncallback){
-        // if(this.loaded){
+        if(this.loaded){
             this.audio.play();
             if(typeof callback == 'function'){
                 this.audio.onended = oncallback;
             };
             
-        // }
+        }
     }
     stop(){
         this.audio.pause();
