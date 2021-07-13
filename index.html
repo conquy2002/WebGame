@@ -43,9 +43,30 @@
 			left: 20px;
 			max-width: 20%;	
 		}
+		#question{
+			border: 1px solid black;
+			border-radius: 5px;
+			margin: 100px auto 20px auto;
+			text-align: center;
+			width: 80%;
+		}
+		#answers{
+			width: 80%;
+			margin: 100px auto 20px auto;
+		}
+		#answers > div {
+			border: 1px solid green;
+			margin-top: 20px;
+			margin-bottom: 20px ;
+			text-align: center;
+
+		}
 	</style>
 </head>
 <body>
+	<audio id="audio">
+		<source id = "audios">
+	</audio>
 	<div class="container">
 		<div class="row">
 			<div id="game" class = "col-7">
@@ -54,7 +75,14 @@
 					<button type="button" id="btn_Start" ">START</button>
 				</div>
 				<div id="questions" class="hide">
-					questions
+					<div id = "question"></div>
+					<div id="answers">
+						<div id="answers_1"></div>
+						<div id="answers_2"></div>
+						<div id="answers_3"></div>
+						<div id="answers_4"></div>
+					</div>
+						
 				</div>
 				
 			</div>
@@ -65,7 +93,6 @@
 	</div>
 </body>
 	<script src="js/screens.js"></script>
-	
 	<script src="js/questions.js"></script>
 	<script src="js/sound.js"></script>
 	<script src="js/game.js"></script>
