@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ai Là Triệu Phú</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<style>
+		#game {
+			border: 1px solid black;
+			width: 500px;
+			height: 600px;
+		}
+		#btn_Start{
+			border : none;
+			padding :10px 30px;
+			border-radius :3px;
+			display: block;
+			margin: 300px auto;
+		}
+		.hide{
+			display: none;
+		}
+		.logo{
+			margin: 100px 200px auto;
+			padding :10px 30px;
+			border-radius: 20px;
+			border: 1px solid black;
+			text-align: center;
+
+		}
+		#scores{
+			border: 1px solid black;
+			width: 10%;
+			height: 300px;
+		}
+		.row .col-5{
+			left: 20px;
+			max-width: 20%;	
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div id="game" class = "col-7">
+				<div id="welcome" class="hide">
+					<div class="logo">logo</div>
+					<button type="button" id="btn_Start" ">START</button>
+				</div>
+				<div id="questions" class="hide">
+					questions
+				</div>
+				
+			</div>
+			<div class="col-5" id="scores">
+				a
+			</div>
+		</div>
+	</div>
+</body>
+	<script src="js/screens.js"></script>
+	
+	<script src="js/questions.js"></script>
+	<script src="js/sound.js"></script>
+	<script src="js/game.js"></script>
+	
+</html>
