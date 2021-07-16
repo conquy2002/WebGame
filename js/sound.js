@@ -1,23 +1,32 @@
-class sound{
-    constructor(namefile){
-        this.fileName = namefile;
-        this.audio = new Audio('sound/'+ this.fileName);
-        this.loaded = false;
-        this.audio.addEventListener('canplaythrough',() => {
-            this.loaded = true;
-        })
-        
+const audio = document.querySelector('#audio');
+const mute = document.querySelector('#mute');
+var muteSound = false
+const sound = {
+    start: function(name,callback){
+        audio.src = `sound/${name}`;
+        audio.play();
+        if(typeof callback == 'function'){
+            audio.onended = callback;
+        }; 
+    },
+    doc: function(text,callback){
+        audio.src = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(text)}&tl=vi&client=tw-ob`;
+        audio.play();
+        if(typeof callback == 'function'){
+            audio.onended = callback;
+        }; 
+    },
+    stop: function(){
+        audio.pause();
     }
-    start(oncallback){
-        if(this.loaded){
-            this.audio.play();
-            if(typeof callback == 'function'){
-                this.audio.onended = oncallback;
-            };
-            
-        }
-    }
-    stop(){
-        this.audio.pause();
+}
+mute.onclick = function(){
+    var x =  document.getElementById('line').classList.toggle('line1')
+    if(muteSound){
+        muteSound = false;
+        audio.muted = false;
+    }else{
+        muteSound = true;
+        audio.muted = true;
     }
 }

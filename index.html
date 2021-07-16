@@ -72,21 +72,40 @@
 		}
 
 		@-webkit-keyframes blink {
-		0%, 49% {
-			background-color: rgb(117, 209, 63);
-			border: 2px solid #e50000;
+			0%, 49% {
+				background-color: rgb(117, 209, 63);
+				border: 2px solid #e50000;
+			}
+			50%, 100% {
+				background-color: #e50000;
+				border: 2px solid rgb(117, 209, 63);
+			}
 		}
-		50%, 100% {
-			background-color: #e50000;
-			border: 2px solid rgb(117, 209, 63);
+		#mute{
+			border : none;
+			padding : 8px 10px;
+			border-radius :3px;
+			display: block;
+			margin: 216px auto;
 		}
+		.line1 {
+			width: 66px;
+			height: 39px;
+			border-bottom: 1px solid rgb(0, 0, 0);
+			-webkit-transform:
+				translateY(-22px)
+				translateX(-4px)
+				rotate(35deg); 
+			position: absolute;
+			/* top: -20px; */
+    	}
+		#audio{
+			display: none;
 		}
 	</style>
 </head>
 <body>
-	<audio id="audio">
-		<source id = "audios">
-	</audio>
+	<audio id="audio" src="" controls autoplay ></audio>
 	<div class="container">
 		<div class="row">
 			<div id="game" class = "col-7">
@@ -107,7 +126,8 @@
 				
 			</div>
 			<div class="col-5" id="scores">
-				a
+				
+				<button id="mute" ><div id="line"></div>mute</button>
 			</div>
 		</div>
 	</div>

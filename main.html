@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ai Là Triệu Phú</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<audio id="audio" src="" ></audio>
+	<div class="container">
+		<div class="row">
+			<div class = "col-7 game">
+				<div id="welcome">
+					<div class="logo">logo</div>
+					<button type="button" class="btn_Start" >START</button>
+				</div>
+				<div id="questions">	
+					<div id = "question"></div>
+					<div id = "answers">
+						<div class="active hide"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-5" id="scores">
+				<div class="row">
+					<div class="col-3">Điểm:</div>
+					<div class="col-4 " id = "diem">0</div>
+				</div>
+				<div class="row">
+					<div class="col-3">Câu:</div>
+					<div id = "scoresindex" class="col-4 scoresindex">0</div>
+				</div>
+				<div class="row">
+					<div class="col-7">Lĩnh Vực:</div>
+					<div class="col-4 scoresindex">0</div>
+				</div>
+				<div class="row" style="margin-left: 10px;">
+					<div class="col-7" >Thời gian:</div>
+					<div class="col-6" style="margin-left: -20px;"  id="time">0 : 30</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/game.js">
+</script>
+</html>

@@ -1,0 +1,84 @@
+.hide{
+    display: none;
+}
+.game {
+    border: 1px solid black;
+    width: 500px;
+    height: 600px;
+}
+.btn_Start{
+    border : none;
+    padding :10px 30px;
+    border-radius :3px;
+    display: block;
+    margin: 300px auto;
+}
+.logo{
+    margin: 100px 200px auto;
+    padding :10px 30px;
+    border-radius: 20px;
+    border: 1px solid black;
+    text-align: center;
+
+}
+#scores{
+    border: 1px solid black;
+    width: 10%;
+    height: 300px;
+}
+.row .col-5{
+    left: 20px;
+    max-width: 20%;	
+}
+#question{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 100px auto 20px auto;
+    text-align: center;
+    width: 80%;
+}
+#answers{
+    width: 80%;
+    margin: 100px auto 20px auto;
+}
+#answers > div {
+    border: 1px solid green;
+    margin-top: 20px;
+    margin-bottom: 20px ;
+    text-align: center;
+
+}
+.active{
+    background-color :green;
+    color: white;
+}
+.quadrat {
+    margin-top: 20px;
+    margin-bottom: 20px ;
+    text-align: center;
+    -webkit-animation: blink 0.5s infinite;  /* Safari 4+ */
+    -moz-animation: blink 0.5s infinite;  /* Fx 5+ */
+    -o-animation: blink 0.5s infinite;  /* Opera 12+ */
+    animation: blink 0.5s infinite;  /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes blink {
+    0%, 49% {
+        background-color: rgb(117, 209, 63);
+        border: 2px solid #e50000;
+    }
+    50%, 100% {
+        background-color: #e50000;
+        border: 2px solid rgb(117, 209, 63);
+    }
+}
+#scores .row {
+    margin-top: 25px;
+    margin-left: 20px;
+}
+#scores .row div {
+    color:rgb(0, 0, 0);
+    text-align: center;
+    font-size : 18px;
+    font-weight: bold;
+}
