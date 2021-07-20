@@ -14,21 +14,45 @@
     margin: 300px auto;
 }
 .logo{
-    margin: 100px 200px auto;
-    padding :10px 30px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px 30px;
     border-radius: 20px;
     border: 1px solid black;
     text-align: center;
-
+    background: #dae0e5;
+    color: red;
+    font-family: cursive;
+    font-weight: bold;
+    background-color: white;
+    animation-name: example;
+    animation-duration: 3s;
 }
 #scores{
+    position: relative;
     border: 1px solid black;
     width: 10%;
     height: 300px;
+    background: #fff;
+    opacity:0.9 ;
+}
+#scores::before{
+    content: "";
+    position: absolute;
+    background: url(../images/4_103936.jpg) center no-repeat;
+    bottom: 0px;
+    right: 0;
+    width: 160px;
+    height: 134px;
+    opacity: 0.8;
+    background-size: cover;
+    /*transform: rotate(45deg);*/
 }
 .row .col-5{
     left: 20px;
-    max-width: 20%;	
+    max-width: 20%; 
+    border: 1px solid black;
+    border-radius: 10px;
 }
 #question{
     border: 1px solid black;
@@ -73,12 +97,48 @@
     }
 }
 #scores .row {
-    margin-top: 25px;
-    margin-left: 20px;
+    margin-top: 15px;
+    /*margin-left: 20px;*/
 }
 #scores .row div {
-    color:rgb(0, 0, 0);
-    text-align: center;
-    font-size : 18px;
+color: rgb(150, 13, 112);
+    text-align: left;
+    font-size: 18px;
     font-weight: bold;
+    border: none;
+}
+/* Update 17/7/2021 by Van Manh*/
+body{
+    background:url(../images/super_brain.jpg) center no-repeat;
+}
+.btn_Start{
+    background: red;
+    color:white;
+    font-weight: bold;
+    border-radius: 10px;
+    animation: colorBackground 0.5s infinite;
+}
+.btn_Start:hover {
+    background-color: greenyellow;
+}
+.row1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game.col-7{
+     background:url(../images/bg.jpg) center no-repeat;
+    opacity: 0.8;
+    border-radius: 15px;
+}
+/* Code animation */
+@keyframes example {
+  70% {background-color: crimson;}
+  60% {background-color: lightsalmon;}
+  50% {background-color: pink;}
+  50% {background-color: indigo;}
+  60% {background-color: white;}
+  60% {background-color: red;}
+  70% {background-color: saddlebrown;}
+  70% {background-color: yellow;}
 }
