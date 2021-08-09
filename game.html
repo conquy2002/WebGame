@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ai Là Triệu Phú</title>
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/9a5965c6f1.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+ 
+	<link rel="stylesheet" type="text/css" href="css/game.css">
+</head>
+<body>
+	<div id="root">
+        <div class="game-app">
+            <audio id="audio-theme" src = "sound/theme.mp3"></audio>
+            <audio id="audio-click" src = "sound/click.mp3"></audio>
+            <div class="toggle-music-effect"><i class="fas fa-music color-black"></i></div>
+            <div class="toggle-sound-effect"><i class="fas fa-volume-up"></i></div>
+            <div class="main-board">
+                <div id = "welcome" >
+                    <div class="logo">
+                        <img id="logo-img" src="images/logo.png">
+                        <h1 id="logo-text" class="text">AI LÀ TRIỆU PHÚ </h1>
+                    </div>
+                    <nav class="navigation">
+                        <div class="button PVB">Cá nhân</div>
+                        <div class="button PVP">Đối Kháng</div>
+                        <h5 class="select-language">Ngôn ngữ: <strong>Tiếng Anh</strong> - <strong>Tiếng Việt</strong></h5>
+                    </nav>
+                </div>
+                <div id = "PVB-main" >
+                   <div class = "gameChat">
+                       <div class = "chat-main">
+                           <div class = "chat-message"></div>
+                           <div class="chat-send">
+                            
+                            <input name="message" placeholder="Nhập tin nhắn tại đây..." autocomplete="off" id = "mymessage">
+                            
+                        </div>
+                       </div>
+                   </div>
+                   <div class = "gamePlay">
+                       <div class = "text linhvuc">LINH VUC: <span id = "linhvuc"></span></div>
+                       <div id = "question"></div>
+                       <div id = "answers">
+						<div class="active hide"></div>
+					</div>
+                   </div>
+                   <div class = "gameInfo">
+                       <h1 class="text">CÁ NHÂN</h1>
+                       <h3 class="text">Câu hỏi: <span id="quesion-num">1</span></h3>
+                       <h3 class="text">Thời gian: <span id="time">30s</span></h2>
+                       <h2 class="text">Điểm: <span id="point">0</span></h2>
+                       <div class= "tro-giup-list">
+                            <div class = "tro_giup"><img class= "tro_giup_0" src="images/tg-50-50.png"></div>
+                            <div class = "tro_giup"><img class= "tro_giup_1" src="images/tg-call.png"></div>
+                            <div class = "tro_giup"><img class= "tro_giup_2" src="images/tg-khan-gia.png"></div>
+                            <div class = "tro_giup"><img class= "tro_giup_3" src="images/tg-thong-thai.png"></div>
+                       </div>
+                       <div class="button reset">Chơi lại</div>
+                       <div class="button back">Quay về</div>
+                   </div>
+                </div>
+            </div>
+            <div class="error"><h1 class="text">LỖI KẾT NỐI SEVER !!</h1></div>
+            <div class="parent"><h1 class="text">ĐANG CHUẨN BỊ ....</h1></div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/event.js"></script>
+</html>
